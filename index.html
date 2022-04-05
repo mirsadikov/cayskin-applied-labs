@@ -14,9 +14,27 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/assets/scripts/home.js" type="module"></script>
     <link rel="stylesheet" href="/assets/styles/home.css" />
     <title>CREAM SHOP</title>
   </head>
+
   <body>
     <!-- HEADER -->
     <header class="header">
@@ -67,19 +85,138 @@
           <h1 class="hero__heading f-weight--bold t--uppercase">
             Lorem ipsum de dolor amet
           </h1>
-          <button class="hero__btn btn--primary u-rounded">SHOP NOW</button>
+          <a
+            href="/collection.html"
+            class="hero__btn btn--primary u-rounded f-weight--bold"
+          >
+            SHOP NOW
+          </a>
         </div>
       </div>
     </header>
 
     <!-- MAIN -->
     <main class="main">
-      <section class="section products">
-        <div class="products__header">
-          <h2 class="products__title">Discover our products</h2>
-          <div class="products__nav">
-
+      <!-- PRODUCTS -->
+      <section class="main__section products">
+        <div class="products__container container">
+          <div class="products__header">
+            <h2 class="products__title t-titles">Discover our products</h2>
+            <div class="products__nav">
+              <a href="/collection.html" class="products__nav-link t--uppercase"
+                >Shop all</a
+              >
+              <button class="slider-nav__left products__nav-left u-rounded">
+                <img
+                  src="/assets/images/icons/chevron-left.svg"
+                  alt="chevren-left"
+                />
+              </button>
+              <button class="slider-nav__right products__nav-right u-rounded">
+                <img
+                  src="/assets/images/icons/chevron-right.svg"
+                  alt="chevren-right"
+                />
+              </button>
+            </div>
           </div>
+          <div class="products__list owl-carousel"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="main__section about">
+        <div class="about__container container">
+          <p class="about__sub f-sub t--uppercase">Why brand name?</p>
+          <h2 class="about__title t-titles">
+            <span class="about__title--dashed"
+              >Sed ut perspiciatis unde omy</span
+            >
+            <br />
+            At vero eos et accusamus et iusto odio dignissimos
+          </h2>
+          <ul class="about__makeups owl-carousel">
+            <li class="about__makeup">
+              <img
+                src="/assets/images/home/makeup1.svg"
+                alt="make up"
+                class="about__makeup-img"
+              />
+              <h3 class="about__makeup-title">Lorem ipsum</h3>
+              <p class="about__makeup-desc">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum
+              </p>
+            </li>
+            <li class="about__makeup">
+              <img
+                src="/assets/images/home/makeup2.svg"
+                alt="make up"
+                class="about__makeup-img"
+              />
+              <h3 class="about__makeup-title">Sed ut perspiciatis unde</h3>
+              <p class="about__makeup-desc">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident.
+              </p>
+            </li>
+            <li class="about__makeup">
+              <img
+                src="/assets/images/home/makeup3.svg"
+                alt="make up"
+                class="about__makeup-img"
+              />
+              <h3 class="about__makeup-title">Ut enim ad minim</h3>
+              <p class="about__makeup-desc">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum
+              </p>
+            </li>
+            <li class="about__makeup">
+              <img
+                src="/assets/images/home/makeup4.svg"
+                alt="make up"
+                class="about__makeup-img"
+              />
+              <h3 class="about__makeup-title">At vero eos eaccusamus</h3>
+              <p class="about__makeup-desc">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- COLLECTIONS -->
+      <section class="main__section collections t--white">
+        <div class="collections__container container">
+          <div class="collections__header">
+            <h2 class="collections__title t-titles">Collections</h2>
+            <div class="collections__nav">
+              <button class="slider-nav__left collections__nav-left u-rounded">
+                <img
+                  src="/assets/images/icons/chevron-left.svg"
+                  alt="chevren-left"
+                />
+              </button>
+              <button
+                class="slider-nav__right collections__nav-right u-rounded"
+              >
+                <img
+                  src="/assets/images/icons/chevron-right.svg"
+                  alt="chevren-right"
+                />
+              </button>
+            </div>
+          </div>
+          <p class="collections__info">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum, Cream Shop
+          </p>
+          <ul class="collections__list t--uppercase owl-carousel"></ul>
         </div>
       </section>
     </main>

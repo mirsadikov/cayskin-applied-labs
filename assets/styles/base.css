@@ -2,7 +2,14 @@
   --color-primary: #7373d7;
   --color-black: #000;
   --color-white: #fff;
-  --border-bottom-1: 1px solid var(--color-white);
+  --color-grey-light: #c9c9ff;
+  --color-grey: #9b9b9b;
+  --color-red: #f05136;
+  --border-bottom-1: 1px solid var(--color-primary);
+  --f-size-normal: 16px;
+  --f-weight-bold: 700;
+  --f-weight-semibold: 600;
+  --f-weight-medium: 500;
 }
 
 * {
@@ -14,6 +21,22 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--color-white);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+}
+
+::-moz-selection,
+::selection {
+  color: var(--color-white);
+  background: var(--color-grey-light);
 }
 
 ul {
@@ -28,4 +51,6 @@ a {
 button {
   border: none;
   font-size: 17px;
+  cursor: pointer;
+  user-select: none;
 }
