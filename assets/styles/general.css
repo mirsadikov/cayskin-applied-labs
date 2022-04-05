@@ -1,6 +1,6 @@
 .container {
   max-width: 1440px;
-  padding: 0 8rem;
+  padding: 0 var(--padding);
   margin: 0 auto;
 }
 
@@ -16,6 +16,7 @@
 .f-sub {
   font-size: 18px;
   font-weight: 600;
+  line-height: 140%;
 }
 
 /* TEXT */
@@ -28,14 +29,14 @@
   color: var(--color-white);
 }
 
-.t-titles {
-  text-transform: uppercase;
-}
-
 /* BUTTON */
 .btn--primary {
   background-color: var(--color-primary);
   color: var(--color-white);
+}
+
+.btn--light {
+  background: var(--color-primary-light);
 }
 
 /* UTILS */
@@ -51,4 +52,15 @@
   justify-content: center;
   height: 35px;
   width: 35px;
+}
+
+/* LINKS */
+.a-link--underlined {
+  font-weight: var(--f-weight-semibold);
+  border-bottom: var(--border-bottom-2);
+  font-size: 18px;
+}
+
+.a-link--underlined:hover {
+  color: var(--color-primary);
 }

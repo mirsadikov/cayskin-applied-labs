@@ -40,7 +40,7 @@
     <header class="header">
       <div class="header__container container">
         <div class="header__top">
-          <div class="header__announcement">
+          <div class="header__announcement t--white">
             Free Shipping for all orders over $100
           </div>
           <nav class="nav">
@@ -81,8 +81,8 @@
           </nav>
         </div>
         <div class="hero">
-          <p class="hero__sub f-sub t--uppercase">At vero eoset</p>
-          <h1 class="hero__heading f-weight--bold t--uppercase">
+          <p class="hero__sub f-sub t--white t--uppercase">At vero eoset</p>
+          <h1 class="hero__heading f-weight--bold t--white t--uppercase">
             Lorem ipsum de dolor amet
           </h1>
           <a
@@ -101,9 +101,11 @@
       <section class="main__section products">
         <div class="products__container container">
           <div class="products__header">
-            <h2 class="products__title t-titles">Discover our products</h2>
+            <h2 class="products__title t--uppercase">Discover our products</h2>
             <div class="products__nav">
-              <a href="/collection.html" class="products__nav-link t--uppercase"
+              <a
+                href="/collection.html"
+                class="products__nav-link a-link--underlined t--uppercase"
                 >Shop all</a
               >
               <button class="slider-nav__left products__nav-left u-rounded">
@@ -128,7 +130,7 @@
       <section class="main__section about">
         <div class="about__container container">
           <p class="about__sub f-sub t--uppercase">Why brand name?</p>
-          <h2 class="about__title t-titles">
+          <h2 class="about__title t--uppercase">
             <span class="about__title--dashed"
               >Sed ut perspiciatis unde omy</span
             >
@@ -194,7 +196,7 @@
       <section class="main__section collections t--white">
         <div class="collections__container container">
           <div class="collections__header">
-            <h2 class="collections__title t-titles">Collections</h2>
+            <h2 class="collections__title t--uppercase">Collections</h2>
             <div class="collections__nav">
               <button class="slider-nav__left collections__nav-left u-rounded">
                 <img
@@ -217,6 +219,156 @@
             blanditiis praesentium voluptatum, Cream Shop
           </p>
           <ul class="collections__list t--uppercase owl-carousel"></ul>
+        </div>
+      </section>
+
+      <!-- STORY -->
+      <section class="main__section story">
+        <div class="story__container container">
+          <div class="story__rich-text">
+            <h2 class="story__title t--uppercase">
+              Neque porro quisquam est, qui dolorem
+            </h2>
+            <p class="story__desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation
+            </p>
+            <a
+              href="/collection.html"
+              class="story__link a-link--underlined t--uppercase"
+              >Ingredient glossary</a
+            >
+          </div>
+          <img
+            src="/assets/images/home/story1.png"
+            alt="story image"
+            class="story__img"
+          />
+        </div>
+      </section>
+
+      <section class="main__section story story--reverse">
+        <div class="story__container container">
+          <div class="story__rich-text">
+            <p class="f-sub story__sub t--uppercase">Our story</p>
+            <h2 class="story__title t--uppercase">Ut enim ad minima</h2>
+            <p class="story__desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation
+            </p>
+            <a
+              href="/collection.html"
+              class="story__link a-link--underlined t--uppercase"
+              >About us</a
+            >
+          </div>
+          <img
+            src="/assets/images/home/story2.png"
+            alt="story image"
+            class="story__img"
+          />
+        </div>
+      </section>
+
+      <!-- FEATURING -->
+      <section class="main__section featuring">
+        <div class="featuring__container container">
+          <img
+            src="/assets/images/home/featuring.png"
+            alt="featuring"
+            class="featuring__img"
+          />
+          <div class="featuring__rich-text">
+            <p class="featuring__sub f-sub t--uppercase">Featuring</p>
+            <h2 class="featuring__title t--uppercase">Sed ut perspiciatis</h2>
+            <p class="featuring__desc">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident
+            </p>
+            <a
+              href="/collection.html"
+              class="featuring__btn btn--light u-rounded f-weight--bold"
+            >
+              SHOP NOW
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="main__section gallery">
+        <div class="gallery__container container">
+          <div class="gallery__item">
+            <img
+              src="/assets/images/home/gallery1.png"
+              alt="Gallery"
+              class="gallery__img"
+            />
+            <div class="gallery__text">
+              <h2 class="gallery__title t--uppercase">Nemo enim ipsam</h2>
+              <a
+                href="/collection.html"
+                class="gallery__link a-link--underlined t--uppercase"
+                >Shop now</a
+              >
+            </div>
+          </div>
+          <div class="gallery__item">
+            <img
+              src="/assets/images/home/gallery2.png"
+              alt="Gallery"
+              class="gallery__img"
+            />
+            <div class="gallery__text">
+              <h2 class="gallery__title t--uppercase">Temporibus autem</h2>
+              <a
+                href="/collection.html"
+                class="gallery__link a-link--underlined t--uppercase"
+                >Shop now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRANDS -->
+      <section class="main__section brands">
+        <div class="brand__container container">
+          <h3 class="brands__title t--uppercase t--white">Featured</h3>
+          <ul class="brands__list">
+            <li class="brand">
+              <img
+                src="/assets/images/home/brand1.svg"
+                alt="brand"
+                class="brand__img"
+              />
+            </li>
+            <li class="brand">
+              <img
+                src="/assets/images/home/brand2.svg"
+                alt="brand"
+                class="brand__img"
+              />
+            </li>
+            <li class="brand">
+              <img
+                src="/assets/images/home/brand3.svg"
+                alt="brand"
+                class="brand__img"
+              />
+            </li>
+            <li class="brand">
+              <img
+                src="/assets/images/home/brand4.svg"
+                alt="brand"
+                class="brand__img"
+              />
+            </li>
+          </ul>
         </div>
       </section>
     </main>
