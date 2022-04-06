@@ -1,0 +1,26 @@
+.header {
+  background: url(/assets/images/collection/hero.png) center top / cover
+    no-repeat;
+  max-height: 100vh;
+  height: 60rem;
+}
+
+.hero {
+  position: absolute;
+  left: var(--padding);
+  width: 52rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero__heading {
+  font-weight: var(--f-weight-bold);
+  font-size: 5.2rem;
+  line-height: 140%;
+}
+
+.hero__text {
+  font-weight: var(--f-weight-medium);
+  font-size: 16px;
+  line-height: 160%;
+}

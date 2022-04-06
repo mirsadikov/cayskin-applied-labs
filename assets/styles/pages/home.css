@@ -1,5 +1,12 @@
 /* HERO */
 
+.header {
+  background: url(/assets/images/home/hero.png) center top / cover no-repeat;
+  min-height: 100vh;
+  max-height: 1280px;
+  height: 100vh;
+}
+
 .hero {
   position: absolute;
   bottom: 8rem;
