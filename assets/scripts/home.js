@@ -4,43 +4,43 @@ const collectionsContainer = document.querySelector('.collections__list');
 
 const products = [
   {
-    imgURL: '/assets/images/home/product1.png',
+    imgURL: '/assets/images/products/product1.png',
     title: 'Your Skin But Better CC+ Cream with SPF50 12ml',
     price: '28.00',
     type: 'new',
   },
   {
-    imgURL: '/assets/images/home/product2.png',
+    imgURL: '/assets/images/products/product2.png',
     title: 'KEM DUONG VT CICA - VT CICA CREAM',
     price: '28.00',
     priceOld: '$32.00',
     type: 'sale',
   },
   {
-    imgURL: '/assets/images/home/product3.png',
+    imgURL: '/assets/images/products/product3.png',
     title: 'Niche Beauty CCC Cream – Niche Beauty',
     price: '28.00',
   },
   {
-    imgURL: '/assets/images/home/product4.png',
+    imgURL: '/assets/images/products/product4.png',
     title: 'ISIE Glow body lotion SPF45',
     price: '28.00',
   },
   {
-    imgURL: '/assets/images/home/product5.png',
+    imgURL: '/assets/images/products/product5.png',
     title: 'Universal Mineral body lotion SPF55',
     price: '28.00',
     hot: true,
   },
   {
-    imgURL: '/assets/images/home/product6.png',
+    imgURL: '/assets/images/products/product6.png',
     title: 'Isle body oil SPF30',
     price: '28.00',
     hot: true,
   },
 ];
 
-const collecitons = [
+const collections = [
   {
     imgURL: '/assets/images/home/collection1.png',
     title: 'Sed ut perspiciatis',
@@ -58,15 +58,14 @@ const collecitons = [
 products.forEach((product) => {
   const html = `
     <div class="product ${product.hot ? 'product--hot' : ''}">
-        <a href="/product.html">
-        <div class="product__img-container">
+    <div class="product__img-container">
+      <a href="/product.html">
         <img
             src="${product.imgURL}"
             alt="${product.title}"
             load="lazy"
             class="product__img"
         />
-        <a href="#" class="product__link">+ Quick Shop</a>
         ${
           product.type === 'new'
             ? '<span class="product__badge u-rounded">New</span>'
@@ -74,13 +73,16 @@ products.forEach((product) => {
             ? '<span class="product__badge product__badge--opacity u-rounded">Sale</span>'
             : ''
         }
-        </div>
-        <h3 class="product__title">
-            ${product.title}
-        </h3>
-        <p class="product__price">$${
-          product.price
-        } <span class="product__price--old">${
+      </a>
+      <a href="#" class="product__link">+ Quick Shop</a>
+    </div>
+    <a href="/product.html">
+      <h3 class="product__title">
+        ${product.title}
+      </h3>
+      <p class="product__price">$${
+        product.price
+      } <span class="product__price--old">${
     product.priceOld ? product.priceOld : ''
   }</span></p>
     </a>
@@ -89,7 +91,7 @@ products.forEach((product) => {
   productsContainer.insertAdjacentHTML('beforeend', html);
 });
 
-collecitons.forEach((collection) => {
+collections.forEach((collection) => {
   const html = `
     <li class="collection">
         <img

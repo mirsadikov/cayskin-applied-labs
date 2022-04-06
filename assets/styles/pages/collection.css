@@ -1,5 +1,5 @@
 .header {
-  background: url(/assets/images/collection/hero.png) center top / cover
+  background: url(/assets/images/collection/hero.png) center center / cover
     no-repeat;
   max-height: 100vh;
   height: 60rem;
@@ -23,4 +23,27 @@
   font-weight: var(--f-weight-medium);
   font-size: 16px;
   line-height: 160%;
+}
+
+/* PRODUCTS */
+.products__filters {
+  padding-bottom: 8px;
+  font-weight: var(--f-weight-light);
+  font-size: var(--f-size-normal);
+  line-height: 160%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.products__sort {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 5.6rem 2.4rem;
 }

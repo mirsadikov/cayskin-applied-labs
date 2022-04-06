@@ -1,0 +1,21 @@
+.breadcrumb {
+    padding: 16px 0;
+}
+
+.breadcrumb__link {
+  font-weight: var(--f-weight-light);
+  font-size: 14px;
+  line-height: 160%;
+  color: #555;
+  opacity: 0.5;
+}
+
+.breadcrumb--active {
+  opacity: 1;
+  color: #222222;
+}
+
+.breadcrumb--active::before {
+  content: '/';
+  margin: 0 8px;
+}
