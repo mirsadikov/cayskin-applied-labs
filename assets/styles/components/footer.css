@@ -108,6 +108,7 @@
 }
 
 .footer__chat {
+  z-index: 9999;
   position: fixed;
   right: 4rem;
   bottom: 4rem;
