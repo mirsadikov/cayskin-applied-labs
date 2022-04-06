@@ -26,6 +26,10 @@
 }
 
 /* PRODUCTS */
+.products {
+  padding-bottom: 8rem;
+}
+
 .products__filters {
   padding-bottom: 8px;
   font-weight: var(--f-weight-light);
