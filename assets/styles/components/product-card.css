@@ -61,6 +61,9 @@
 
 .product__title {
   margin: 0.4rem 0;
+  height: 3rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .product__title,
