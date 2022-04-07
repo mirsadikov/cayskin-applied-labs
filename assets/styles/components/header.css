@@ -127,7 +127,7 @@
 
   @supports not (backdrop-filter: blur(5px)) {
     .nav__links-container--mobile-full {
-      background-color: #000c;
+      background-color: #000e;
     }
 
     .header--black .nav__links-container--mobile-full {

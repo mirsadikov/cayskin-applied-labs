@@ -109,18 +109,18 @@ $(document).ready(function () {
   const productsCarousel = $('.products__list');
   productsCarousel.owlCarousel({
     dots: false,
-    margin: 24,
     stageOuterClass: 'products__stage',
     responsive: {
       0: {
-        items: 1,
         autoWidth: true,
+        margin: 8,
       },
       600: {
+        margin: 16,
         autoWidth: true,
-        items: 2,
       },
-      1000: {
+      1001: {
+        margin: 24,
         autoWidth: false,
         items: 3,
       },
@@ -137,9 +137,21 @@ $(document).ready(function () {
   // Collection carousel
   const collectionsCarousel = $('.collections__list');
   collectionsCarousel.owlCarousel({
-    items: 2,
     dots: false,
-    margin: 24,
+    responsive: {
+      0: {
+        autoWidth: true,
+        margin: 8,
+      },
+      700: {
+        margin: 16,
+        autoWidth: true,
+      },
+      1001: {
+        margin: 24,
+        items: 2,
+      },
+    },
     stageOuterClass: 'collections__stage',
   });
 
