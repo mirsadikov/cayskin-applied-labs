@@ -20,7 +20,7 @@
 }
 
 .hero__heading {
-  font-size: 80px;
+  font-size: 8rem;
   line-height: 90%;
   width: 66%;
   margin: 0 auto;
@@ -83,12 +83,20 @@
   border-bottom: 2px dashed currentColor;
 }
 
+.about__makeups {
+  display: flex;
+  align-items: flex-start;
+  overflow-x: scroll;
+}
+
 .about__makeup {
+  flex: 1 0 25%;
   padding: 3.2rem 2.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  user-select: none;
 }
 
 .about__makeup-title {
@@ -107,6 +115,27 @@
 .about__makeup-desc {
   font-size: 14px;
   line-height: 160%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .about__makeups {
+    overflow-x: scroll;
+    cursor: grab;
+  }
+
+  .about__makeups::-webkit-scrollbar {
+    height: 2px;
+    background-color: #00000025;
+  }
+
+  .about__makeups::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 10px;
+  }
+
+  .about__makeup {
+    flex: 1 0 30%;
+  }
 }
 
 /* COLLECTIONS */
@@ -319,4 +348,8 @@
   display: flex;
   justify-content: center;
   gap: 2.4rem;
+}
+
+.brand__img {
+  width: 100%;
 }

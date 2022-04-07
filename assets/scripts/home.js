@@ -108,10 +108,23 @@ $(document).ready(function () {
   //   Products carousel
   const productsCarousel = $('.products__list');
   productsCarousel.owlCarousel({
-    items: 3,
-    margin: 24,
     dots: false,
+    margin: 24,
     stageOuterClass: 'products__stage',
+    responsive: {
+      0: {
+        items: 1,
+        autoWidth: true,
+      },
+      600: {
+        autoWidth: true,
+        items: 2,
+      },
+      1000: {
+        autoWidth: false,
+        items: 3,
+      },
+    },
   });
 
   $('.products__nav-right').click(function () {
@@ -121,13 +134,7 @@ $(document).ready(function () {
     productsCarousel.trigger('prev.owl.carousel');
   });
 
-  // Make ups carousel
-  const makeupsCarousel = $('.about__makeups');
-  makeupsCarousel.owlCarousel({
-    items: 4,
-    margin: 24,
-  });
-
+  // Collection carousel
   const collectionsCarousel = $('.collections__list');
   collectionsCarousel.owlCarousel({
     items: 2,
@@ -143,3 +150,44 @@ $(document).ready(function () {
     collectionsCarousel.trigger('prev.owl.carousel');
   });
 });
+
+// make ups
+let pos = { top: 0, left: 0, x: 0, y: 0 };
+
+const mouseDownHandler = function (e) {
+  // Change the cursor and prevent user from selecting the text
+  makeupsContainer.style.cursor = 'grabbing';
+  makeupsContainer.style.userSelect = 'none';
+
+  pos = {
+    // The current scroll
+    left: makeupsContainer.scrollLeft,
+    top: makeupsContainer.scrollTop,
+    // Get the current mouse position
+    x: e.clientX,
+    y: e.clientY,
+  };
+
+  document.addEventListener('mousemove', mouseMoveHandler);
+  document.addEventListener('mouseup', mouseUpHandler);
+};
+
+const mouseMoveHandler = function (e) {
+  // How far the mouse has been moved
+  const dx = e.clientX - pos.x;
+  const dy = e.clientY - pos.y;
+
+  // Scroll the element
+  makeupsContainer.scrollTop = pos.top - dy;
+  makeupsContainer.scrollLeft = pos.left - dx;
+};
+
+const mouseUpHandler = function () {
+  document.removeEventListener('mousemove', mouseMoveHandler);
+  document.removeEventListener('mouseup', mouseUpHandler);
+
+  makeupsContainer.style.cursor = 'grab';
+  makeupsContainer.style.removeProperty('user-select');
+};
+
+makeupsContainer.addEventListener('mousedown', mouseDownHandler);

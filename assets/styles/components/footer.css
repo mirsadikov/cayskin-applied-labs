@@ -1,5 +1,10 @@
 .footer {
-  padding: 8rem 8rem 4rem;
+  padding: 8rem 0 4rem;
+  background-color: var(--color-black);
+}
+
+.footer__container {
+  padding: 0 var(--padding);
   background-color: var(--color-black);
   display: grid;
   grid-template-columns: 43% 1fr 1fr 1fr;
@@ -15,7 +20,7 @@
 }
 
 .footer__form {
-  padding-right: 25%;
+  padding-right: 10rem;
 }
 
 .footer__form-title {
@@ -108,7 +113,7 @@
 }
 
 .footer__chat {
-  z-index: 9999;
+  z-index: 999;
   position: fixed;
   right: 4rem;
   bottom: 4rem;
@@ -117,4 +122,55 @@
   background-color: transparent;
   border-radius: 50%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer__container {
+    gap: 5rem;
+  }
+
+  .footer__form {
+    padding-right: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 10rem;
+  }
+
+  .footer__main {
+    display: contents;
+  }
+
+  .footer__form {
+    grid-column: 1 / -1;
+    padding-right: 0;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid #b7b7b7;
+
+  }
+
+  .footer__bottom {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .footer__container {
+    padding: 0 5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer__container {
+    padding: 0 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__bottom {
+    grid-row: 4;
+  }
 }
