@@ -30,7 +30,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="/assets/scripts/home.js" type="module"></script>
+    <script>
+      document.documentElement.style.setProperty(
+        '--app-height',
+        `${window.innerHeight}px`,
+      );
+    </script>
+    <script src="/assets/scripts/home.js" type="module" defer></script>
     <link rel="stylesheet" href="/assets/styles/home.css" />
     <title>CREAM SHOP</title>
   </head>

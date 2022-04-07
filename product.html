@@ -30,7 +30,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="/assets/scripts/product.js" type="module"></script>
+    <script src="/assets/scripts/product.js" type="module" defer></script>
     <link rel="stylesheet" href="/assets/styles/product.css" />
     <title>CREAM SHOP</title>
   </head>
@@ -93,7 +93,31 @@
 
     <!-- MAIN -->
     <main class="main">
-     
+      <!-- PRODUCTS -->
+      <section class="main__section products">
+        <div class="products__container container">
+          <div class="products__header">
+            <h2 class="products__title t--uppercase">You might also like</h2>
+            <div class="products__nav">
+              <div class="products__nav-btns">
+                <button class="slider-nav__left products__nav-left u-rounded">
+                  <img
+                    src="/assets/images/icons/chevron-left.svg"
+                    alt="chevren-left"
+                  />
+                </button>
+                <button class="slider-nav__right products__nav-right u-rounded">
+                  <img
+                    src="/assets/images/icons/chevron-right.svg"
+                    alt="chevren-right"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="products__list owl-carousel"></div>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->

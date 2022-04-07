@@ -57,6 +57,12 @@
   grid-auto-flow: dense;
 }
 
+.products .product {
+  width: 100%;
+  min-width: 100%;
+  max-width: max-content;
+}
+
 .products__banner {
   grid-column: span 2;
   max-height: 548px;

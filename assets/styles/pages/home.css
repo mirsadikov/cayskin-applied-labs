@@ -1,10 +1,13 @@
 /* HERO */
+:root {
+  --app-height: 100vh;
+}
 
 .header {
   background: url(/assets/images/home/hero.png) center top / cover no-repeat;
-  min-height: 100vh;
+  min-height: var(--app-height);
   max-height: 1280px;
-  height: 100vh;
+  height: var(--app-height);
 }
 
 .hero {
@@ -34,38 +37,8 @@
 }
 
 /* PRODUCTS */
-
 .products {
   margin-top: 10rem;
-}
-
-.products__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3rem;
-}
-
-.products__title {
-  font-size: 4rem;
-  line-height: 140%;
-}
-
-.products__nav-btns {
-  display: inline-block;
-}
-
-.products__nav-link {
-  margin-right: 2.6rem;
-}
-
-.products__nav-left {
-  background-color: var(--color-grey);
-}
-
-.products__nav-right {
-  margin-left: 1px;
-  background-color: var(--color-primary);
 }
 
 /* ABOUT */
@@ -368,28 +341,6 @@
     flex: 1 0 40%;
   }
 
-  .products__title {
-    text-align: center;
-  }
-
-  .products .product {
-    width: 40vw;
-    max-width: 40rem;
-  }
-
-  .products__header {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .products__nav {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    justify-content: space-between;
-    padding: 0 1rem;
-  }
-
   .collection {
     max-width: 60rem;
     width: 70vw;
@@ -478,15 +429,6 @@
     margin-top: 3rem;
   }
 
-  .products__title {
-    font-size: 24px;
-  }
-
-  .products .product {
-    width: 60vw;
-    max-width: 35rem;
-  }
-
   .product__link {
     display: none;
   }
@@ -526,11 +468,6 @@
 }
 
 @media only screen and (max-width: 450px) {
-  .products .product {
-    width: 90vw;
-    max-width: 255px;
-  }
-
   .about__makeup {
     flex: 1 0 83%;
   }
@@ -539,6 +476,7 @@
     height: 100vw;
     object-position: 77%;
   }
+
   .featuring__rich-text {
     padding: 2rem;
     padding-bottom: 4rem;

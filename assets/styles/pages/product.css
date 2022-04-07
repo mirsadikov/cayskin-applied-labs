@@ -1,3 +1,20 @@
 .main {
-    min-height: 100vh;
+  min-height: 100vh;
+}
+
+.products__nav {
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .products__header {
+    flex-direction: row;
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+  .products__nav {
+    display: none;
+  }
 }
