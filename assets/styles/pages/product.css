@@ -1,10 +1,66 @@
-.main {
-  min-height: 100vh;
+/* INGREDIENTS */
+.ingredients__container {
+  padding: 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr calc(50% - var(--padding));
+  border-bottom: 1px solid #7373d744;
+  border-top: 1px solid #7373d744;
+}
+
+.ingredients__img-container {
+  height: 100%;
+}
+
+.ingredients__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ingredients__content {
+  padding: 6rem var(--padding);
+  text-align: center;
+}
+
+.ingredients__title {
+  font-weight: var(--f-weight-semibold);
+  font-size: 4rem;
+  line-height: 140%;
+}
+
+.ingredients__info {
+  font-size: 14px;
+  line-height: 160%;
+  margin-top: 2.4rem;
+  margin-bottom: 6.2rem;
+}
+
+.ingredients__list {
+  display: grid;
+  gap: 2.4rem;
+  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+}
+
+.ingredient {
+  background-color: #e9e9ff;
+  padding: 4rem 0.5rem;
+}
+
+.ingredient__title {
+  font-weight: var(--f-weight-medium);
+  font-size: 14px;
+  line-height: 160%;
+  text-transform: uppercase;
+  margin-top: 1.6rem;
 }
 
 /* PRODUCTS */
 .products {
-  padding-bottom: 12rem;
+  padding: 12rem 0 9.7rem;
 }
 .products__nav {
   justify-content: center;
@@ -55,6 +111,16 @@
   object-fit: cover;
 }
 
+@media only screen and (max-width: 1200px) {
+  .ingredients__container {
+    display: block;
+    max-width: 80rem;
+  }
+  .ingredients__img-container {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .products__header {
     flex-direction: row;
@@ -76,6 +142,55 @@
 }
 
 @media only screen and (max-width: 700px) {
+  .main__sections-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ingredients {
+    order: 1;
+    border-top: 1px solid #42210b40;
+  }
+  .ingredients__container {
+    border: none;
+  }
+  .ingredients__content {
+    text-align: left;
+  }
+  .ingredients__list {
+    display: block;
+  }
+  .ingredients__info {
+    margin: 16px 0 25px;
+  }
+
+  .ingredient:first-child {
+    border-top: 1px solid #42210b40;
+  }
+  .ingredient {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 1px solid #42210b40;
+    padding: 16px;
+  }
+
+  .ingredient::after {
+    content: url(/assets/images/icons/chevron-down.svg);
+    position: absolute;
+    right: 16px;
+  }
+
+  .ingredient__title {
+    margin-top: 0;
+    margin-left: 2.4rem;
+  }
+  .ingredient__img {
+    height: 5rem;
+    width: 5rem;
+  }
+
   .products__nav {
     display: none;
   }
@@ -86,6 +201,9 @@
 }
 
 @media only screen and (max-width: 450px) {
+  .breadcrumb {
+    display: none;
+  }
   .result {
     height: 340px;
     width: 255px;

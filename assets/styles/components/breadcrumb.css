@@ -1,5 +1,5 @@
 .breadcrumb {
-    padding: 16px 0;
+  padding: 16px 0;
 }
 
 .breadcrumb__link {
@@ -15,7 +15,7 @@
   color: #222222;
 }
 
-.breadcrumb--active::before {
+.breadcrumb__link:not(:first-child)::before {
   content: '/';
   margin: 0 8px;
 }
