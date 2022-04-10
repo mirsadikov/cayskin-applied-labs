@@ -4,6 +4,56 @@ import { products } from './data.js';
 const productsContainer = document.querySelector('.products__list');
 
 window.addEventListener('DOMContentLoaded', () => {
+  // Images carousel
+  var swiper = new Swiper('.mySwiper1', {
+    spaceBetween: 8,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    mousewheel: {
+      releaseOnEdges: true,
+    },
+    breakpoints: {
+      601: {
+        direction: 'vertical',
+        autoHeight: true,
+        navigation: false,
+      },
+      901: {
+        direction: 'horizontal',
+        mousewheel: false,
+      },
+      1201: {
+        direction: 'vertical',
+        autoHeight: true,
+        navigation: false,
+      },
+    },
+  });
+  var swiper2 = new Swiper('.mySwiper2', {
+    spaceBetween: 10,
+    loop: true,
+    grabCursor: true,
+    navigation: {
+      nextEl: '.mySwiper2__nav-right',
+      prevEl: '.mySwiper2__nav-left',
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+    breakpoints: {
+      0: {
+        pagination: {
+          el: '.mySwiper2__dots',
+          type: 'bullets',
+          clickable: true,
+        },
+      },
+      901: {
+        pagination: false,
+      },
+    },
+  });
+
   //   Products carousel
   renderProducts(products, productsContainer);
   createProductCarousel(

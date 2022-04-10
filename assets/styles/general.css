@@ -29,6 +29,10 @@
   color: var(--color-white);
 }
 
+.t--underlined {
+  text-decoration: underline;
+}
+
 /* BUTTON */
 .btn--primary {
   background-color: var(--color-primary);
@@ -63,4 +67,30 @@
 
 .a-link--underlined:hover {
   color: var(--color-primary);
+}
+
+/* RADIO */
+input[type='radio'] {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #42210b50;
+  border-radius: 50%;
+  display: inline-grid;
+  place-content: center;
+  margin-right: 4px;
+}
+
+input[type='radio']::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1rem 1rem var(--color-primary);
+}
+
+input[type='radio']:checked::before {
+  transform: scale(1);
 }
